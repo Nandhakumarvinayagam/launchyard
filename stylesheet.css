@@ -1,0 +1,36 @@
+li{
+	border-bottom: 1px solid #9daca9;
+    color: #454545;
+	display:block;
+	height:60px;
+}
+ol{
+	border-top: 1px solid #9daca9;
+	margin-left:-40px;
+}
+body{
+	background: #dfe2e2;
+}
+img{
+	padding: 5px;    
+    width: 50px;    
+    float: left;
+}
+.EmpDirTitle{
+	text-align: center;
+}
+.searchDiv{
+	border-top: 1px solid #9daca9;
+	padding-top: 20px;
+
+}
+.search{
+	width: 95%;
+    height: 25px;
+    border-radius: 25px;
+    padding-left: 50px;
+    background: url(http://tourfactory.com/art/mobi/btnSmallSearchIcon.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: left center; 
+}
