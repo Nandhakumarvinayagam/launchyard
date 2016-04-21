@@ -52,6 +52,7 @@
   }
  ];
  	
+	
 	var myArr = [];
 	var i;
 	for(i=0;i<json.length;i++)
@@ -96,41 +97,47 @@
 	
 	} 
 
+	addButton.onclick = function addFunction(){
+			json.push({ 
+       			 "name" : newName.value,
+       			 "designation"  : newDesignation.value,
+        		"avatar": "http://coenraets.org/apps/angular-directory/pics/eugene_lee.jpg"
+            });
+            alert("object added");
+			
+		}
+	viewButton.onclick = function addFunction(){
+			console.log("length of json="+json.length);
+			console.log(json[json.length-1]);
+		}
+
                 var count=0;
-		myText.onkeyup = function myFunction(e)
+		
+			myText.onkeyup = function myFunction(e)
 		{
-			if (e.keyCode == 13){
-			var fil=document.getElementById("myText").value;
-			for(var i=0;i<myArr.length;i++)
+			if (e.keyCode == 13)
 			{
-				if(myArr[i].search(fil)!==0)
+				var fil=document.getElementById("myText").value;
+				for(var i=0;i<myArr.length;i++)
 				{
-					document.getElementById("id"+(i+1)).style.display = "none";
-					count++;
-				}
-				else
-				{
+					if(myArr[i].search(fil)!==0)
+						{
+							document.getElementById("id"+(i+1)).style.display = "none";
+							count++;
+							if(count>=(json.length))
+							{
+							document.getElementById("addObjectDiv").style.display="block";
+				   			var name=document.getElementById("newName").value;
+                			var designation=document.getElementById("newDesignation").value;
+							}
+
+						}	
+					else
+					{
 					count=0;
+					}
 				}
 			}
-		
-			if(count>(json.length))
-			{
-				document.getElementById("addObjectDiv").style.display="block";
-				
-                var name=document.getElementById("newName").value;
-                var designation=document.getElementById("newDesignation").value;
-			
-		addButton.onclick = function myFunction(){
-			json.push({ 
-        "name" : newName.value,
-        "designation"  : newDesignation.value,
-        "avatar": "http://coenraets.org/apps/angular-directory/pics/eugene_lee.jpg"
-        
-    });
-			alert("object added to json. Check in console json.length and json[10]");
+	
 		}
-		}
-	}
-	}
 	
