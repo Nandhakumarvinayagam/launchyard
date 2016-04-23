@@ -57,7 +57,7 @@
 	var i;
 	for(i=0;i<json.length;i++)
 	{
-		myArr[i] = json[i]["name"];
+		myArr[i] = json[i]["name"].toLowerCase();
 	}
 	var x = myArr.sort();
 	
@@ -72,7 +72,7 @@
 	var index = 0;
 	for(var j = 0;j<json.length;j++)
 	{
-		if(json[j]["name"] == myArr[i])
+		if(json[j]["name"].toLowerCase() == myArr[i])
 			{
 				index=j;
 				break;
@@ -118,9 +118,10 @@
 			if (e.keyCode == 13)
 			{
 				var fil=document.getElementById("myText").value;
+				var file=fil.toLowerCase();
 				for(var i=0;i<myArr.length;i++)
 				{
-					if(myArr[i].toLowerCase()!=fil.toLowerCase())
+					if(myArr[i].search(file)!==0)
 						{
 							document.getElementById("id"+(i+1)).style.display = "none";
 							count++;
