@@ -1,6 +1,6 @@
 li{
 	border-bottom: 1px solid #9daca9;
-    color: #454545;
+	color: #454545;
 	display:block;
 	height:60px;
 	text-transform: capitalize;
@@ -14,8 +14,8 @@ body{
 }
 img{
 	padding: 5px;    
-    width: 50px;    
-    float: left;
+    	width: 50px;    
+    	float: left;
 }
 .EmpDirTitle{
 	text-align: center;
@@ -27,11 +27,11 @@ img{
 }
 .search{
 	width: 90%;
-    height: 25px;
-    border-radius: 25px;
-    padding-left: 50px;
-    background: url(http://tourfactory.com/art/mobi/btnSmallSearchIcon.png);
-    background-repeat: no-repeat;
-    background-color: white;
-    background-position: left center; 
+    	height: 25px;
+    	border-radius: 25px;
+    	padding-left: 50px;
+    	background: url(http://tourfactory.com/art/mobi/btnSmallSearchIcon.png);
+    	background-repeat: no-repeat;
+    	background-color: white;
+    	background-position: left center; 
 }
