@@ -120,7 +120,7 @@
 				var fil=document.getElementById("myText").value;
 				for(var i=0;i<myArr.length;i++)
 				{
-					if(myArr[i].search(fil)!==0)
+					if(myArr[i].toLowerCase()!=fil.toLowerCase())
 						{
 							document.getElementById("id"+(i+1)).style.display = "none";
 							count++;
